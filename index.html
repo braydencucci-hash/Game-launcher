@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Launcher</title>
+</head>
+<body>
 
+<button onclick="launch()">Fullscreen</button>
+
+<script>
+function launch() {
+  let win = window.open("about:blank", "_blank");
+
+  win.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title> </title>
+      <style>
+        html, body {
+          margin:0;
+          padding:0;
+          overflow:hidden;
+          background:#000;
+        }
+      </style>
+    </head>
+    <body>
+      <iframe src="https://dsjnsdjn.codehs.me/1.12.html"
+              style="width:100vw;height:100vh;border:none;"></iframe>
+    </body>
+    </html>
+  `);
+}
+</script>
+
+</body>
+</html>
